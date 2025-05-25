@@ -1,0 +1,309 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trang Chủ</title>
+  <link rel="stylesheet" href="trangchu.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+<div class="menutong">
+  <div class="fix">
+  <header class="search">
+        <img src="logo cắt nền.png" width="100px">
+        <div class="search-bar">
+           
+            <i class="fa-solid fa-magnifying-glass" onclick="searchProduct()" style="cursor:pointer;"></i>
+             <input id="searchInput" type="search" placeholder="Tìm kiếm">
+        </div>
+        <nav>
+            <a href="#">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+             <a href="#">
+          <i class="fa-solid fa-heart"></i>
+        </a>
+            <a href="trangchu.html">
+                <i class="fa-solid fa-house"></i>
+            </a>
+           <div id="user-icon">
+                <i class="fa-solid fa-user"></i>
+                <span id="user-status">Khách hàng</span> |
+                <a id="login-btn" class="menu-link" href="dangki.html">Đăng kí</a>
+                <a id="logout-btn" class="menu-link" style="display:none;">Đăng xuất</a>
+            </div>
+              
+              
+        </nav>
+    </header>
+  </div>
+  <div class="hamber">
+  <input type="checkbox" id="menu-toggle">
+  <label for="menu-toggle" class="menu-icon">&#9776;</label>
+  <div class="side-menu">
+    <label for="menu-toggle" class="close-label">&#10005;</label>
+    <ul>
+      <li><strong>TẠP CHÍ MVKT</strong></li>
+       <li ><a href="lookbook.html" class="linkhamber">LOOKBOOK</a></li>
+      <li><strong>THƯƠNG HIỆU</strong></li>
+      <li><a href="mvkt.html" class="linkhamber">MVKT</a></li>
+       <li><a href="" class="linkhamber">FAQ</a></li>
+      <li><strong><a href="" style="text-decoration: none; color: black;"> DANH SÁCH CỬA HÀNG</a></strong></li>
+      <li><strong>MẠNG XÃ HỘI</strong></li>
+      <li>FACEBOOK</li>
+      <li>INSTAGRAM</li>
+      <li>TIKTOK</li>
+      <li>YOUTUBE</li>
+    </ul>
+  </div>
+  </div>
+  <header class="menu">
+    <ul>
+      <li><a href="#">Bộ Sưu Tập</a>
+        <ul>
+          <li><a href="bosuutap.html">Vietnam Exclusive</a></li>
+          <li><a href="#">285SS</a></li>
+          <li><a href="#">With MUN</a></li>
+          <li><a href="#">BELLY GOM × MVKT</a></li>
+          <li><a href="#">Powerpuff Girls × MVKT</a></li>
+        </ul>
+      </li>
+      <li><a href="banchay.html">Bán Chạy</a></li>
+      <li><a href="#">Áo</a>
+        <ul>
+          <li><a href="aothun.html">Áo Phông</a></li>
+          <li><a href="aohoodie.html">Áo Hoodie</a></li>
+          <li><a href="aosomi.html">Áo Sơ Mi</a></li>
+          <li><a href="aolen.html">Áo Len</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Quần</a>
+        <ul>
+          <li><a href="quandai.html">Quần Dài</a></li>
+          <li><a href="quanshort.html">Quần Short</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Phụ Kiện</a>
+        <ul>
+          <li><a href="tui.html">Túi</a></li>
+          <li><a href="mu.html">Mũ</a></li>
+          <li><a href="tat.html">Tất</a></li>
+        </ul>
+      </li>
+    </ul>
+  </header>
+  </div>
+  <div class="slideshow-container">
+    <img class="slide" src="img/ảnh banner.jpg" alt="Ảnh 1">
+    <img class="slide" src="img/banner2.jpg" alt="Ảnh 2">
+    <img class="slide" src="img/banner3.jpg" alt="Ảnh 3">
+  </div>
+
+ 
+<div class="anhdoi">
+  <img class="anhdoi1" src="img/anhdoi1.jpg">
+  <img class="anhdoi2" src="img/anhdoi2.jpg">
+</div>
+<div class="xuhuong">
+  <div class="title">#XU HƯỚNG</div>
+    <div class="cards">
+      <div><img src="img/ảnh_2-removebg-preview.png"></div>
+      <div><img src="img/ảnh_3-removebg-preview.png"></div>
+      <div><img src="img/ảnh-removebg-preview.png"></div>
+      <div><img src="img/ảnh_5-removebg-preview.png"></div>
+      <div><img src="img/ảnh_4-removebg-preview.png"></div>
+    </div>
+</div>
+ <div class="title">#BÁN CHẠY</div>
+ <div class="product-scroll-container">
+   
+    <div class="product-list">
+  
+ <div class="product-card" data-category="áo phông" data-price="1340000" data-color="hồng">
+    <a href="aothunhong.html"><img src="img/aophonghong.webp"></a>
+      <h2>Áo Thun Blur Alien Hồng nhạt</h2>
+      <p>1.340.000 ₫</p>
+      <button>Thêm vào giỏ</button>
+  </div>
+  
+
+  <div class="product-card" data-category="áo phông" data-price="1340000" data-color="kem">
+    <a href="aothunkem.html"><img src="img/aophongkemtrc.webp"></a>
+      <h2>Áo thun Heart Alien Kem MVKT</h2>
+      <p>1.340.000 ₫</p>
+      <button>Thêm vào giỏ</button>
+  </div>
+
+  <div class="product-card" data-category="áo sơ mi" data-price="2460000" data-color="xanh">
+    <a href="somixanh.html"><img src="img/somixanhtrc.webp"></a>
+      <h2>Áo Sơ Mi Họa Tiết Flower Lettering Xanh Mint</h2>
+      <p>2.460.000 ₫</p>
+      <button>Thêm vào giỏ</button>
+  </div>
+
+  <div class="product-card" data-category="áo sơ mi" data-price="2690000" data-color="vàng">
+    <a href="somivang.html"><img src="img/somivangtrc.webp"></a>
+      <h2>Áo Sơ Mi Ngắn Tay Oversize Ripstop Vàng</h2>
+      <p>2.690.000 ₫</p>
+      <button>Thêm vào giỏ</button>
+  </div>
+
+  <div class="product-card" data-category="mũ" data-price="1340000" data-color="be">
+    <a href="mube.html"><img src="img/mubetrc.webp"></a>
+      <h2>Mũ Bóng Chày Artwork Mesh Trucker Be</h2>
+      <p>1.340.000 ₫</p>
+      <button>Thêm vào giỏ</button>
+  </div>
+
+  <div class="product-card" data-category="mũ" data-price="2460000" data-color="camo">
+    <a href="mucamo.html"><img src="img/mucamotrc.webp"></a>
+      <h2>Mũ Bóng Chày Tuft Embroidery Logo Camo</h2>
+      <p>2.460.000 ₫</p>
+      <button>Thêm vào giỏ</button>
+  </div>
+   <div class="product-card" data-category="quần dài" data-price="2240000" data-color="hồng">
+    <a href="quandaihong.html"><img src="img/quandaihongtrc.webp"></a>
+      <h2>Quần Nỉ Belly Collage Logo Hồng</h2>
+      <p>2.240.000 ₫</p>
+      <button>Thêm vào giỏ</button>
+  </div>
+
+  <div class="product-card" data-category="quần dài" data-price="2460000" data-color="camo">
+    <a href="quandainau.html"><img src="img/quandainautrc.webp"></a>
+      <h2>Quần Nỉ Basic Bio Washing Cacao</h2>
+      <p>2.460.000 ₫</p>
+      <button>Thêm vào giỏ</button>
+  </div>
+   <div class="product-card" data-category="tất" data-price="230000" data-color="xanh">
+    <a href="tattrang.html"><img src="img/tattrangtrc.webp"></a>
+      <h2>Tất Logo Emblem Xanh Dương MVKT</h2>
+      <p>230.000 ₫</p>
+      <button>Thêm vào giỏ</button>
+  </div>
+
+  <div class="product-card" data-category="tất" data-price="230000" data-color="vàng">
+    <a href="tatvang.html"><img src="img/tatvangtrc.webp"></a>
+      <h2>Tất Gothic Font Logo Vàng MVKT</h2>
+      <p>230.000 ₫</p>
+      <button>Thêm vào giỏ</button>
+  </div>
+    <div class="product-card" data-category="túi" data-price="2460000" data-color="đen">
+    <a href="tuiden.html"><img src="img/tuidentrc.webp"></a>
+      <h2>Balo Cordura Day Đen MVKT</h2>
+      <p>2.460.000 ₫</p>
+      <button>Thêm vào giỏ</button>
+  </div>
+
+  <div class="product-card" data-category="túi" data-price="2460000" data-color="hồng">
+    <a href="tuihong.html"><img src="img/tuihongtrc.webp"></a>
+      <h2>Balo Day Trip Light Hồng MKVT</h2>
+      <p>2.460.000 ₫</p>
+      <button>Thêm vào giỏ</button>
+  </div>
+    <div class="product-card" data-category="quần short" data-price="2240000" data-color="hồng">
+    <a href="quanshorthong.html"><img src="img/quanshorthongtrc.webp"></a>
+      <h2>Quần Short Oversize Ripstop Hồng MVKT</h2>
+      <p>2.240.000 ₫</p>
+      <button>Thêm vào giỏ</button>
+  </div>
+
+  <div class="product-card" data-category="quần short" data-price="1560000" data-color="xanh">
+      <a href="quanshortxanh.html"><img src="img/quanshortxanhtrc.webp"></a>
+      <h2>Quần Short Applique Logo Pigment Xanh </h2>
+      <p>1.560.000 ₫</p>
+      <button>Thêm vào giỏ</button>
+  </div>
+   <div class="product-card" data-category="áo len" data-price="3140000" data-color="trắng">
+    <a href="aolenkem.html"><img src="img/aolenkemtrc.webp"></a>
+      <h2>Áo len Square Structure Artwork Trắng Ngà</h2>
+      <p>3.140.000 ₫</p>
+      <button>Thêm vào giỏ</button>
+  </div>
+
+  <div class="product-card" data-category="áo len" data-price="1340000" data-color="xanh">
+    <a href="aolenxanhla.html"><img src="img/aolenxanhlatrc.webp"></a>
+      <h2>Áo Len Kéo Khóa Stripe Front Zip Up Xanh </h2>
+      <p>1.340.000 ₫</p>
+      <button>Thêm vào giỏ</button>
+  </div>
+   <div class="product-card" data-category="áo hoodie" data-price="2460000" data-color="be">
+    <a href="hoodie trắng.html"><img src="img/hoodie trắng.webp"></a>
+      <h2>Áo Hoodie Mugshot Alien Be</h2>
+      <p>2.460.000 ₫</p>
+      <button>Thêm vào giỏ</button>
+  </div>
+
+  <div class="product-card" data-category="áo hoodie" data-price="2460000" data-color="xanh">
+    <a href="hoodie xanh.html"><img src="img/hoodie xanh.webp"></a>
+      <h2>Áo Hoodie Lettering Rabbit </h2>
+      <p>2.460.000 ₫</p>
+      <button>Thêm vào giỏ</button>
+  </div>
+</div>
+ </div>
+
+<div class="title">#BỘ SƯU TẬP</div>
+<a href="bosuutap.html"><img class="suutap" src="img/bosuutap.jpg"></a>
+<div class="email" align="center">@MVKT.offical.VietNam</div>
+<div class="chat-button" onclick="toggleChat()">
+  💬
+</div>
+
+<div class="chat-box" id="chatBox">
+  <div class="chat-header">
+    Hỗ trợ khách hàng
+    <span class="close-chat" onclick="toggleChat()">×</span>
+  </div>
+  <div class="chat-messages" id="chatMessages">
+    <div class="bot">Xin chào! Mình có thể giúp gì cho bạn?</div>
+  </div>
+  <div class="chat-input">
+    <input type="text" id="chatInput" placeholder="Nhập tin nhắn..." />
+    <button onclick="sendMessage()">Gửi</button>
+  </div>
+</div>
+</div>
+</div>
+<div class="footer">
+        <div class="footer1">
+            <h3>ĐÁNH GIÁ CỦA KHÁCH HÀNG</h3>
+            <a href="sao.html"><p>Nhấn vào đây để đánh giá</p></a>
+        </div>
+        <div class="footer2">
+            <h3>THÔNG BÁO PHÁP LÝ</h3>
+            <p>Điều khoản sử dụng</p>
+            <p>Chính sách bảo vệ dữ liệu cá nhân</p>
+            <p>Chính sách Cookie</p>
+        </div>
+        <div class="footer3">
+            <h3>HỖ TRỢ KHÁCH HÀNG</h3>
+            <P>Câu hỏi thường gặp</P>
+            <P>Tra cứu đơn hàng</P>
+            <P>Chính sách đổi hàng</P>
+            <P>Chính sách giao hàng</P>
+            <P>Danh sách cửa hàng</P>
+        </div>
+        <div class="footer4">
+            <h3>HOTLINE HỖ TRỢ KHÁCH HÀNG</h3>
+            <P><b>19000374</b> hoặc <b>0123456789</b></P>
+            <P>09:00 - 21:00, Thứ 2 - Chủ Nhật</P>
+            <P>Email: support@muvninth.com.vn</P>
+        </div>
+         <div class="footer5">
+            <h3>THÔNG TIN CÔNG TY</h3>
+            <P>Phản phối bởi Công ty CP Quốc Tế</P>
+            <P>Địa chỉ trụ sở : Việt Nam</P>
+         </div>
+    </div>
+
+<script src="thichvagiohang.js"></script>
+<script src="luot.js"></script>
+<script src="ao.js"></script>
+<script src="timkiem1.js"></script>
+<script src="dangnhap.js"></script>
+<script src="slideshow.js"></script>
+  
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Đánh giá sản phẩm</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+   body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(90deg, #141e30, #203A43, #2C5364); 
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    
+nav {
+  position: fixed;       /* Đặt nav cố định trên màn hình */
+  top: 10px;            /* Cách mép trên 10px */
+  right: 10px;           /* Cách mép trái 10px */
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  z-index: 1000;        /* Đảm bảo nav nằm trên các phần tử khác */
+  
+}
+nav a{color:white;
+      font-size: x-large;}
+
+    .review-box {
+      background:white;
+      background-color: rgba(255, 255, 255, 0.5);
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      width: 100%;
+      max-width: 500px;
+     
+    }
+
+    h2 {
+      text-align: center;
+      color: #fa0404;
+      margin-bottom: 20px;
+      font-size: xx-large;
+    }
+    .stars {
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      margin-bottom: 15px;
+      direction: rtl;
+    }
+
+    .stars input {
+      display: none;
+    }
+    .stars label {
+      font-size: 30px;
+      background-color:linear-gradient(90deg, #141e30, #203A43, #2C5364);
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+
+    .stars input:checked ~ label {
+      color: #ccc;
+    }
+
+    .stars label:hover,
+    .stars label:hover ~ label,
+    .stars input:checked + label,
+    .stars input:checked + label ~ label {
+      color: #e78f2b;
+    }
+
+
+    textarea {
+      width: 95%;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      resize: none;
+      font-size: 15px;
+      margin-bottom: 15px;
+    }
+
+    input[type="file"] {
+      display: block;
+      margin-bottom: 15px;
+    }
+
+    #danhgia1 {
+      width: 100%;
+      padding: 12px;
+      background: #e76969;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    #danhgia1:hover {
+      background: #c04a4a;
+    }
+
+    .preview {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 15px;
+    }
+
+    .preview img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    .submitted-review {
+      margin-top: 20px;
+      border-top: 1px solid #ddd;
+      padding-top: 15px;
+    }
+
+    .submitted-review h3 {
+      color:#fa0404;
+    }
+   
+  </style>
+</head>
+<body>
+<nav>
+  <a href="trangchu.html">
+                <i class="fa-solid fa-house"></i>
+            </a>
+</nav>
+<div class="review-box">
+  <h2>Đánh giá sản phẩm</h2>
+
+  <form id="reviewForm">
+    <div class="stars">
+      <input type="radio" name="star" id="star5" value="5"><label for="star5">&#9733;</label>
+      <input type="radio" name="star" id="star4" value="4"><label for="star4">&#9733;</label>
+      <input type="radio" name="star" id="star3" value="3"><label for="star3">&#9733;</label>
+      <input type="radio" name="star" id="star2" value="2"><label for="star2">&#9733;</label>
+      <input type="radio" name="star" id="star1" value="1"><label for="star1">&#9733;</label>
+    </div>
+
+    <textarea id="comment" placeholder="Hãy chia sẻ nhận xét của bạn..."></textarea>
+
+    <input type="file" id="imageUpload" multiple accept="image/*">
+
+    <div class="preview" id="previewImages"></div>
+
+    <button id="danhgia1" type="submit">Gửi đánh giá</button>
+  </form>
+
+  <div class="submitted-review" id="submittedReview"></div>
+</div>
+
+<script>
+  const form = document.getElementById('reviewForm');
+  const preview = document.getElementById('previewImages');
+  const submitted = document.getElementById('submittedReview');
+
+  document.getElementById('imageUpload').addEventListener('change', function () {
+    preview.innerHTML = "";
+    [...this.files].forEach(file => {
+      const reader = new FileReader();
+      reader.onload = e => {
+        const img = document.createElement('img');
+        img.src = e.target.result;
+        preview.appendChild(img);
+      };
+      reader.readAsDataURL(file);
+    });
+  });
+
+  form.addEventListener('submit', function (e) {
+  e.preventDefault();
+  
+  const star = document.querySelector('input[name="star"]:checked')?.value || 0;
+  const comment = document.getElementById('comment').value;
+
+  const previewClone = preview.cloneNode(true);
+
+  const review = document.createElement('div');
+  review.classList.add('review-item');
+  review.innerHTML = `
+    <h3>Đánh giá mới:</h3>
+    <p><strong>Số sao:</strong> ${'★'.repeat(star)}${'☆'.repeat(5 - star)}</p>
+    <p><strong>Nội dung:</strong> ${comment}</p>
+  `;
+  review.appendChild(previewClone);
+
+  submitted.appendChild(review);
+
+  form.reset();
+  preview.innerHTML = "";
+});
+
+</script>
+
+</body>
+</html>

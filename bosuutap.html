@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bộ Sưu Tập</title>
+    <link rel="stylesheet" href="bosuutap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+
+</head>
+<body>
+    <div class="menutong">
+  <div class="fix">
+  <header class="search">
+        <img src="logo cắt nền.png" width="100px">
+        <div class="search-bar">
+           
+            <i class="fa-solid fa-magnifying-glass" onclick="searchProduct()" style="cursor:pointer;"></i>
+             <input id="searchInput" type="search" placeholder="Tìm kiếm">
+        </div>
+         <nav>
+            <a href="#">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+             <a href="#">
+          <i class="fa-solid fa-heart"></i>
+        </a>
+            <a href="trangchu.html">
+                <i class="fa-solid fa-house"></i>
+            </a>
+           <div id="user-icon">
+                <i class="fa-solid fa-user"></i>
+                <span id="user-status">Khách hàng</span> |
+                <a id="login-btn" class="menu-link" href="dangki.html">Đăng kí</a>
+                <a id="logout-btn" class="menu-link" style="display:none;">Đăng xuất</a>
+            </div>
+        </nav>
+    </header>
+  </div>
+  <div class="hamber">
+  <input type="checkbox" id="menu-toggle">
+  <label for="menu-toggle" class="menu-icon">&#9776;</label>
+  <div class="side-menu">
+    <label for="menu-toggle" class="close-label">&#10005;</label>
+    <ul>
+      <li><strong>TẠP CHÍ MVKT</strong></li>
+       <li ><a href="lookbook.html" class="linkhamber">LOOKBOOK</a></li>
+      <li><strong>THƯƠNG HIỆU</strong></li>
+      <li><a href="mvkt.html" class="linkhamber">MVKT</a></li>
+       <li><a href="" class="linkhamber">FAQ</a></li>
+      <li><strong><a href="" style="text-decoration: none; color: black;"> DANH SÁCH CỬA HÀNG</a></strong></li>
+      <li><strong>MẠNG XÃ HỘI</strong></li>
+      <li>FACEBOOK</li>
+      <li>INSTAGRAM</li>
+      <li>TIKTOK</li>
+      <li>YOUTUBE</li>
+    </ul>
+  </div>
+  </div>
+  <header class="menu">
+    <ul>
+      <li><a href="#">Bộ Sưu Tập</a>
+        <ul>
+          <li><a href="bosuutap.html">Vietnam Exclusive</a></li>
+          <li><a href="#">285SS</a></li>
+          <li><a href="#">With MUN</a></li>
+          <li><a href="#">BELLY GOM × MVKT</a></li>
+          <li><a href="#">Powerpuff Girls × MVKT</a></li>
+        </ul>
+      </li>
+      <li><a href="banchay.html">Bán Chạy</a></li>
+      <li><a href="#">Áo</a>
+        <ul>
+          <li><a href="aothun.html">Áo Phông</a></li>
+          <li><a href="aohoodie.html">Áo Hoodie</a></li>
+          <li><a href="aosomi.html">Áo Sơ Mi</a></li>
+          <li><a href="aolen.html">Áo Len</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Quần</a>
+        <ul>
+          <li><a href="quandai.html">Quần Dài</a></li>
+          <li><a href="quanshort.html">Quần Short</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Phụ Kiện</a>
+        <ul>
+          <li><a href="tui.html">Túi</a></li>
+          <li><a href="mu.html">Mũ</a></li>
+          <li><a href="tat.html">Tất</a></li>
+        </ul>
+      </li>
+    </ul>
+  </header>
+  </div>
+  
+
+    <div class="slider-container">
+    <div class="slider">
+        <div class="slide">
+            <a href="aolenxanhla.html"><img src="img/anh1-removebg-preview.png"></a>
+        </div>
+        <div class="slide">
+            <a href="aothunhong.html"><img src="img/anh2-removebg-preview.png"></a>
+        </div>
+        <div class="slide">
+            <a href="somixanh.html"><img src="img/anh3-removebg-preview.png"></a>
+        </div>
+        <div class="slide">
+            <a href="somivang.html"><img src="img/anh4-removebg-preview.png"></a>
+        </div>
+        <div class="slide">
+            <a href="aolenkem.html"><img src="img/anh5-removebg-preview.png"></a>
+        </div>
+       
+    </div>
+    </div>
+
+    <div class="chat-button" onclick="toggleChat()">
+  💬
+</div>
+
+<div class="chat-box" id="chatBox">
+  <div class="chat-header">
+    Hỗ trợ khách hàng
+    <span class="close-chat" onclick="toggleChat()">×</span>
+  </div>
+  <div class="chat-messages" id="chatMessages">
+    <div class="bot">Xin chào! Mình có thể giúp gì cho bạn?</div>
+  </div>
+  <div class="chat-input">
+    <input type="text" id="chatInput" placeholder="Nhập tin nhắn..." />
+    <button onclick="sendMessage()">Gửi</button>
+  </div>
+</div>
+    
+
+    <div class="footer">
+         <div class="footer1">
+            <h3>ĐÁNH GIÁ CỦA KHÁCH HÀNG</h3>
+           <a href="sao.html"><p>Nhấn vào đây để đánh giá</p></a>
+        </div>
+        <div class="footer2">
+            <h3>THÔNG BÁO PHÁP LÝ</h3>
+            <p>Điều khoản sử dụng</p>
+            <p>Chính sách bảo vệ dữ liệu cá nhân</p>
+            <p>Chính sách Cookie</p>
+        </div>
+        <div class="footer3">
+            <h3>HỖ TRỢ KHÁCH HÀNG</h3>
+            <P>Câu hỏi thường gặp</P>
+            <P>Tra cứu đơn hàng</P>
+            <P>Chính sách đổi hàng</P>
+            <P>Chính sách giao hàng</P>
+            <P>Danh sách cửa hàng</P>
+        </div>
+        <div class="footer4">
+            <h3>HOTLINE HỖ TRỢ KHÁCH HÀNG</h3>
+            <P><b>19000374</b> hoặc <b>0123456789</b></P>
+            <P>09:00 - 21:00, Thứ 2 - Chủ Nhật</P>
+            <P>Email: support@muvninth.com.vn</P>
+        </div>
+         <div class="footer5">
+            <h3>THÔNG TIN CÔNG TY</h3>
+            <P>Phản phối bởi Công ty CP Quốc Tế</P>
+            <P>Địa chỉ trụ sở : Việt Nam</P>
+         </div>
+    </div>
+
+
+    <script src="thichvagiohang.js"></script>
+       <script src="timkiem1.js"></script>
+       <script src="chatbox.js"></script>
+</body>
+</html>
